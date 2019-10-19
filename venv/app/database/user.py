@@ -1,16 +1,52 @@
-from routes import db
-from flask import Flask
-from flask_bcrypt import generate_password_hash, check_password_hash
+from routes import db, app
+from passlib.apps import custom_app_context as pwd_context
+import datetime
+import jwt
 
 
 class User(db.Model):
     __tablename__ = 'users'
 
     def hash_password(self, password):
-        self.password_hash = generate_password_hash(password, 10)
-    
+        self.password_hash = pwd_context.encrypt(password)
+
     def verify_password(self, password):
-        return check_password_hash(self.password_hash, password)
+        return pwd_context.verify(password, self.password_hash)
+
+    def encode_auth_token(self, user_id):
+        """
+        Generate Auth Token
+        :param user_id:
+        :return: string
+        """
+        try:
+            payload = {
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=0, seconds=5),
+                'iat': datetime.datetime.utcnow(),
+                'sub': user_id
+            }
+            return jwt.encode(
+                payload,
+                app.config.get('SECRET_KEY'),
+                algorithm='HS256'
+            )
+        except Exception as e:
+            return e
+
+    @staticmethod
+    def decode_auth_token(auth_token):
+        """
+        Decodes Auth Token
+        :param auth_token:
+        :return: integer|string
+        """
+        try:
+            payload = jwt.decode(auth_token, app.config.get('SECRET_KEY'))
+            return payload['sub']
+        except jwt.ExpiredSignatureError:
+            return 'Signature expired. Please log in again.'
+        except jwt.InvalidTokenError:
+            return 'Invalid token. PLease log in again.'
 
     user_id = db.Column(db.Integer, primary_key=True)
     public_id = db.Column(db.String(70), nullable=False, unique=True)

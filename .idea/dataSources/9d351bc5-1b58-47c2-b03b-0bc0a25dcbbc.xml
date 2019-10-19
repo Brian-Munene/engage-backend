@@ -33,7 +33,7 @@
       <ObjectId>33084</ObjectId>
       <StateNumber>692</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>727</IntrospectionStateNumber>
+      <IntrospectionStateNumber>733</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|33127|33129|1
 sequence|table|33135|33137|1

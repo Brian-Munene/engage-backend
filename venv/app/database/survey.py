@@ -18,7 +18,7 @@ class Survey(db.Model):
     created_at = db.Column(db.Date, nullable=False)
 
     # Relationships
-    survey_responses = db.relationship('SurveyResponses', backref='surveys', lazy=True)
+    survey_responses = db.relationship('SurveyResponse', backref='surveys', lazy=True)
 
     def __init__(self, public_id, name, description, question_0, question_1, question_2, question_3, question_4, question_5):
         self.created_at = datetime.date.today()

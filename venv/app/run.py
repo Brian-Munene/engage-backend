@@ -2,6 +2,8 @@ from flask import Flask
 import cherrypy
 
 from routes import app, db
+from database.revoked_token import RevokedToken
+from flask_jwt_extended import JWTManager
 
 
 cherrypy.tree.graft(app.wsgi_app, '/')
@@ -13,6 +15,17 @@ if __name__ == "__main__":
     app.config['SECRET_KEY'] = 'employee-engagement'
     app.config['GOOGLE_CLIENT_ID'] = '218366592776-q0aub0931ioo8kpg3802v6ual059m9pn.apps.googleusercontent.com'
     app.config['GOOGLE_CLIENT_SECRET'] = 'RwiF4L6qG_wjLjuU7Pss4pqq'
+    app.config['JWT_SECRET_KEY'] = 'jwt-employee-engagement'
+    app.config['JWT_BLACKLIST_ENABLED'] = True
+    app.config['JWT_BLACKLIST_TOKEN_CHECKS'] = ['access', 'refresh']
+    jwt = JWTManager(app)
+
+
+    @jwt.token_in_blacklist_loader
+    def check_if_token_in_blacklist(decrypted_token):
+        jti = decrypted_token['jti']
+        return RevokedToken.is_jti_blacklisted(jti)
+
     try:
         cherrypy.engine.start()
     except KeyboardInterrupt:

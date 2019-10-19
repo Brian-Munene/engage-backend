@@ -3,10 +3,12 @@ import uuid
 
 # File imports
 from database.survey import Survey
+from flask_jwt_extended import jwt_required
 from routes import app, db
 
 
 @app.route('/create_survey', methods=['POST'])
+@jwt_required
 def create_survey():
     if request.method == 'POST':
         request_json = request.get_json()
@@ -32,6 +34,7 @@ def create_survey():
 
 
 @app.route('/surveys', methods=['GET'])
+@jwt_required
 def view_all_surveys():
     surveys = Survey.query.all();
     if surveys:
@@ -49,6 +52,7 @@ def view_all_surveys():
 
 
 @app.route('/survey/<public_id>', methods=['GET'])
+@jwt_required
 def view_single_survey(public_id):
     if request.method == 'GET':
         survey = Survey.query.filter_by(public_id=public_id).first()
