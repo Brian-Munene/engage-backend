@@ -5,12 +5,14 @@ from flask_jwt_extended import (jwt_required,
                                 get_jwt_identity, get_raw_jwt)
 
 # File imports
-from database.company import Company
+# from database.company import Company
+from database.survey import Survey
+from database.survey_response import SurveyResponse
 from routes import app, db
 
 
 @app.route('/register_company', methods=['POST'])
-@jwt_required
+# @jwt_required
 def register_company():
     if request.method == 'POST':
         request_json = request.get_json()
@@ -44,6 +46,28 @@ def company_details(public_id):
         return jsonify(response_object), 200
     else:
         return jsonify({'message': 'Company not found'}), 400
+
+
+@app.route('/company_surveys/<public_id>', methods=['GET'])
+@jwt_required
+def company_surveys(public_id):
+    company = Company.query.filter_by(public_id=public_id).first()
+    if not company:
+        return jsonify({'message': 'Company Details are unavailable.'}), 500
+    surveys = Survey.query.filter_by(company_id=company.company_id).all()
+    if not surveys:
+        return jsonify({'message': 'No surveys found'}), 404
+    survey_list = []
+    for survey in surveys:
+        survey_response = SurveyResponse.query.filter_by(survey_id=survey.survey_id).all()
+        survey_response_dict = {
+            'response_id': survey_response.response_id,
+            'public_id': survey_response.public_id,
+            'survey_id': survey_response.survey_id,
+            'created_at': survey_response.created_at
+        }
+        survey_list.append(survey_response_dict)
+    return jsonify({'survey_responses': survey_list}), 200
 
 
 @app.route('/companies', methods=['GET'])

@@ -10,7 +10,7 @@ import uuid
 # File imports
 from database.user import User
 from database.revoked_token import RevokedToken
-from database.company import Company
+# from database.company import Company
 from routes import app, db
 
 
@@ -45,10 +45,10 @@ def register():
 
 @app.route('/login', methods=['POST'])
 def login():
+    request_json = request.get_json()
+    email = request_json.get('email')
+    password = request_json.get('password')
     try:
-        request_json = request.get_json()
-        email = request_json.get('email')
-        password = request_json.get('password')
         if email is None or password is None:
             return jsonify({'error': 'No data provided'}), 400
         user = User.query.filter_by(email=email).first()
@@ -57,8 +57,8 @@ def login():
             access_token = create_access_token(identity=user.email)
             refresh_token = create_refresh_token(identity=user.email)
             response_object = {
-                "message": "Login Successful",
-                'access_token': access_token,
+                "message":       "Login Successful",
+                'access_token':  access_token,
                 'refresh_token': refresh_token
             }
             return jsonify(response_object), 200
@@ -66,48 +66,48 @@ def login():
             return jsonify({'error': 'Email or password not found'}), 400
     except(Exception, NameError, TypeError, RuntimeError, ValueError) as identifier:
         response_object = {
-            'status': str(identifier),
+            'status':  str(identifier),
             'message': 'Try again @login',
-            'user': email
+            'user':    email
         }
         return jsonify(response_object), 500
     except NameError as name_identifier:
         response_object = {
-            'status': str(name_identifier),
-            'message': 'Try again @login',
-            'error': 'Name',
+            'status':   str(name_identifier),
+            'message':  'Try again @login',
+            'error':    'Name',
             'username': email
         }
         return jsonify(response_object), 500
     except TypeError as type_identifier:
         response_object = {
-            'status': str(type_identifier),
-            'message': 'Try again @login',
-            'error': 'Type',
+            'status':   str(type_identifier),
+            'message':  'Try again @login',
+            'error':    'Type',
             'username': email
         }
         return jsonify(response_object), 500
     except RuntimeError as run_identifier:
         response_object = {
-            'status': str(run_identifier),
-            'message': 'Try again @login',
-            'error': 'Runtime',
+            'status':   str(run_identifier),
+            'message':  'Try again @login',
+            'error':    'Runtime',
             'username': email
         }
         return jsonify(response_object), 500
     except ValueError as val_identifier:
         response_object = {
-            'status': str(val_identifier),
-            'message': 'Try again @login',
-            'error': 'Value',
+            'status':   str(val_identifier),
+            'message':  'Try again @login',
+            'error':    'Value',
             'username': email
         }
         return jsonify(response_object), 500
     except Exception as exc_identifier:
         response_object = {
-            'status': str(exc_identifier),
-            'message': 'Try again @login',
-            'error': 'Exception',
+            'status':   str(exc_identifier),
+            'message':  'Try again @login',
+            'error':    'Exception',
             'username': email
         }
         return jsonify(response_object), 500
@@ -119,8 +119,8 @@ def token_refresh():
     current_user = get_jwt_identity()
     access_token = create_access_token(identity=current_user)
     return {
-        'access_token': access_token
-    }, 200
+               'access_token': access_token
+           }, 200
 
 
 @app.route('/logout', methods=['POST'])
@@ -128,9 +128,9 @@ def token_refresh():
 def logout():
     jti = get_raw_jwt()['jti']
     try:
-        revoked_token = RevokedToken(jti = jti)
+        revoked_token = RevokedToken(jti=jti)
         revoked_token.add()
-        return{'message': 'Access Token has been revoked'}, 200
+        return {'message': 'Access Token has been revoked'}, 200
     except:
         return {'message': 'Something went wrong'}, 500
 

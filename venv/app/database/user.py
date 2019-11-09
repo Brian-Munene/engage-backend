@@ -4,6 +4,27 @@ import datetime
 import jwt
 
 
+def encode_auth_token(user_id):
+    """
+    Generate Auth Token
+    :param public_id:
+    :return: string
+    """
+    try:
+        payload = {
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(days=3, seconds=33),
+            'iat': datetime.datetime.utcnow(),
+            'sub': user_id
+        }
+        return jwt.encode(
+            payload,
+            app.config.get('SECRET_KEY'),
+            algorithm='HS256'
+        )
+    except Exception as e:
+        return e
+
+
 class User(db.Model):
     __tablename__ = 'users'
 
@@ -12,26 +33,6 @@ class User(db.Model):
 
     def verify_password(self, password):
         return pwd_context.verify(password, self.password_hash)
-
-    def encode_auth_token(self, user_id):
-        """
-        Generate Auth Token
-        :param user_id:
-        :return: string
-        """
-        try:
-            payload = {
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=0, seconds=5),
-                'iat': datetime.datetime.utcnow(),
-                'sub': user_id
-            }
-            return jwt.encode(
-                payload,
-                app.config.get('SECRET_KEY'),
-                algorithm='HS256'
-            )
-        except Exception as e:
-            return e
 
     @staticmethod
     def decode_auth_token(auth_token):

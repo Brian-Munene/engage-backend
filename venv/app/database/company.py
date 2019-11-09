@@ -13,6 +13,9 @@ class Company(db.Model):
     company_size = db.Column(db.Integer, nullable=False)
     created_at = db.Column(db.Date, nullable=False)
 
+    # Relationships
+    surveys = db.relationship('Survey', backref='companies', lazy=True)
+
     def __init__(self, public_id, company_name, company_code, company_head, company_size):
         self.company_name = company_name
         self.public_id = public_id
