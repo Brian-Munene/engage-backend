@@ -10,7 +10,7 @@ import uuid
 # File imports
 from database.user import User
 from database.revoked_token import RevokedToken
-# from database.company import Company
+from database.company import Company
 from routes import app, db
 
 

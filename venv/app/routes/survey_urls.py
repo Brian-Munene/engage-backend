@@ -6,7 +6,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity, get_raw_jwt
 # File imports
 from database.survey import Survey
 from database.user import User
-# from database.company import Company
+from database.company import Company
 from routes import app, db
 
 
