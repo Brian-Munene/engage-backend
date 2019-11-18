@@ -91,6 +91,7 @@ def view_all_responses():
             survey_sadness = 0
             survey_dict = {}
             survey_dict['survey'] = survey.name
+            survey_dict['public_id'] = survey.public_id
             survey_dict['created_at'] = survey.created_at
             responses = SurveyResponse.query.filter_by(survey_id=survey.survey_id).all()
             if not responses:
@@ -182,11 +183,33 @@ def view_single_survey_responses(public_id):
         if survey:
             responses = SurveyResponse.query.filter_by(survey_id=survey.survey_id).all()
             responses_count = len(responses)
+            response_list = []
             if responses:
                 happiness = 0
                 hate = 0
                 sadness = 0
                 for response in responses:
+                    response_dict = {
+                        'q0': survey.question_0,
+                        'q1': survey.question_1,
+                        'q2': survey.question_2,
+                        'q3': survey.question_3,
+                        'q4': survey.question_4,
+                        'q5': survey.question_5,
+                        'response': response.response,
+                        'emotion': response.emotion,
+                        'response1': response.response1,
+                        'emotion1':  response.emotion1,
+                        'response2': response.response2,
+                        'emotion2':  response.emotion2,
+                        'response3': response.response3,
+                        'emotion3':  response.emotion3,
+                        'response4': response.response4,
+                        'emotion4':  response.emotion4,
+                        'response5': response.response5,
+                        'emotion5':  response.emotion5,
+                    }
+                    response_list.append(response_dict)
                     if response.emotion == 'happiness':
                         happiness = happiness + 1
                     elif response.emotion == 'hate':
@@ -226,9 +249,10 @@ def view_single_survey_responses(public_id):
                 return jsonify({'survey_name': survey_name,
                                 'created_at': created_at,
                                 'hate': hate,
-                                'hapiness': happiness,
+                                'happiness': happiness,
                                 'sadness': sadness,
-                                'responses_count': responses_count
+                                'responses_count': responses_count,
+                                'response_list': response_list
                                 }), 200
             else:
                 return jsonify({'message': 'No responses available'}), 404

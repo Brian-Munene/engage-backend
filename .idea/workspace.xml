@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/company_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/company_urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/app/routes/survey_responses_url.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/survey_responses_url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/survey_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/survey_urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/user_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/user_urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +128,11 @@
       <workItem from="1572442761708" duration="592000" />
       <workItem from="1572518348794" duration="271000" />
       <workItem from="1573230486534" duration="35598000" />
-      <workItem from="1573371456772" duration="21626000" />
+      <workItem from="1573371456772" duration="22158000" />
+      <workItem from="1573677518410" duration="590000" />
+      <workItem from="1573705305738" duration="1048000" />
+      <workItem from="1573818530307" duration="3934000" />
+      <workItem from="1573972814952" duration="7209000" />
     </task>
     <task id="LOCAL-00001" summary="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls.">
       <created>1571516743510</created>
@@ -148,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573334462046</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adds correct format of data for frontend">
+      <created>1573436903319</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573436903319</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +178,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls." />
     <MESSAGE value="Adds emotion analysis model." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds emotion analysis model." />
+    <MESSAGE value="Adds correct format of data for frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds correct format of data for frontend" />
   </component>
 </project>
