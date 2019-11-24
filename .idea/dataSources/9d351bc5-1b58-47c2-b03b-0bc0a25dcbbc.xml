@@ -29,8 +29,8 @@
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>766</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|33127|33129|1
-sequence|table|33135|33137|1
+      <Relations>sequence|table|33135|33137|1
+sequence|table|33127|33129|1
 sequence|table|33167|33169|1
 sequence|table|33188|33190|1
 sequence|table|33210|33212|1
@@ -59,37 +59,25 @@ sequence|table|33210|33212|1
     </database>
     <role id="13" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="14" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="15" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="16" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="17" parent="1" name="pg_stat_scan_tables">
       <ObjectId>3377</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="18" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
-      <Inherit>1</Inherit>
       <CreateRole>1</CreateRole>
       <CreateDb>1</CreateDb>
       <CanLogin>1</CanLogin>
-      <ConnectionLimit>-1</ConnectionLimit>
       <Replication>1</Replication>
       <BypassRls>1</BypassRls>
     </role>

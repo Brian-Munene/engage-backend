@@ -47,6 +47,8 @@ def view_all_surveys():
     email = get_jwt_identity()
     user = User.query.filter_by(email=email).first()
     company = Company.query.filter_by(company_code=user.company_code).first()
+    if not company:
+        return jsonify({'message': 'Please join a company to view surveys'}), 404
     surveys = Survey.query.filter_by(company_id=company.company_id).all()
     if surveys:
         surveys_list = []

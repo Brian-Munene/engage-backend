@@ -24,8 +24,6 @@ def register():
             return jsonify({'message': 'The email has already been registered'}), 401
         password = request_json.get('password')
         company_code = request_json.get('company_code')
-        if not Company.query.filter_by(company_code=company_code).first():
-            return jsonify({'message': 'The company code is invalid'}), 401
         user_public_id = str(uuid.uuid4())
         user = User(user_public_id, name, email, company_code)
         user.hash_password(password)
@@ -41,6 +39,25 @@ def register():
             return jsonify(response_object), 200
         except:
             return jsonify({'message': 'Something went wrong'}), 500
+
+
+@app.route('/join_company', methods=['POST'])
+@jwt_required
+def join_company():
+    email = get_jwt_identity()
+    user = User.query.filter_by(email=email).first()
+    if not user:
+        return jsonify({'message': 'Please register to proceed'}), 401
+    request_json = request.get_json()
+    company_code = request_json.get('company_code')
+    company = Company.query.filter_by(company_code=company_code).first()
+    if not company:
+        return jsonify({'message': 'The company code is invalid'}), 400
+    user.company_code = company_code
+    db.session.commit()
+    return jsonify({
+        'message': 'You have joined ' + company.company_name + '.'
+    }), 200
 
 
 @app.route('/login', methods=['POST'])
@@ -111,6 +128,33 @@ def login():
             'username': email
         }
         return jsonify(response_object), 500
+
+
+@app.route('/single_user', methods=['GET'])
+@jwt_required
+def single_user():
+    email = get_jwt_identity()
+    user = User.query.filter_by(email=email).first()
+    if not user:
+        return jsonify({'name': 'User'}), 200
+    try:
+        company = Company.query.filter_by(company_code=user.company_code).first()
+        company_name = company.company_name
+        if not company:
+            company_name = 'Not yet registered'
+        return jsonify({
+            'name':      user.name,
+            'public_id': user.public_id,
+            'email':     user.email,
+            'company':   company_name
+        }), 200
+    except:
+        return jsonify({
+            'name':      user.name,
+            'public_id': user.public_id,
+            'email':     user.email,
+            'company': 'Not yet registered'
+        }), 200
 
 
 @app.route('/token_refresh', methods=['POST'])

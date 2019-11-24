@@ -60,7 +60,7 @@ def create_response(public_id):
                 return jsonify({'message': 'Successfully recorded your response'}), 201
 
             else:
-                return jsonify({'message': 'The survey does not exist'}), 404
+                return jsonify({'message': 'The survey does not exist'}), 400
         else:
             return jsonify({'message': 'User is unavailable'}), 400
 
@@ -70,104 +70,104 @@ def create_response(public_id):
 def view_all_responses():
     email = get_jwt_identity()
     user = User.query.filter_by(email=email).first()
+    if not user:
+        return jsonify({'message': 'Please login to proceed'}), 404
     users = User.query.filter_by(company_code=user.company_code).all()
+    if not users:
+        return jsonify({'message': 'Users are not available at the moment'}), 404
     users_count = len(users)
-    if user:
-        company = Company.query.filter_by(company_code=user.company_code).first()
-        if not company:
-            return jsonify({'message': 'Company is unavailable'}), 500
-        surveys = Survey.query.filter_by(company_id=company.company_id).all()
-        if not surveys:
-            return jsonify({'message': 'Surveys are unavailable'}), 401
-        survey_count = len(surveys)
-        total_responses_count = 0
-        happiness = 0
-        hate = 0
-        sadness = 0
-        surveys_list = []
-        for survey in surveys:
-            survey_hate = 0
-            survey_happiness = 0
-            survey_sadness = 0
-            survey_dict = {}
-            survey_dict['survey'] = survey.name
-            survey_dict['public_id'] = survey.public_id
-            survey_dict['created_at'] = survey.created_at
-            responses = SurveyResponse.query.filter_by(survey_id=survey.survey_id).all()
-            if not responses:
-                return jsonify({'message': 'No responses found'}), 404
-            responses_count = len(responses)
-            total_responses_count = total_responses_count + responses_count
-            for response in responses:
-                if response.emotion == 'happiness':
-                    happiness = happiness + 1
-                    survey_happiness = survey_happiness + 1
-                elif response.emotion == 'hate':
-                    hate = hate + 1
-                    survey_hate = survey_hate + 1
-                elif response.emotion1 == 'sadness':
-                    sadness = sadness + 1
-                    survey_sadness = survey_sadness + 1
-                if response.emotion1 == 'happiness':
-                    happiness = happiness + 1
-                    survey_happiness = survey_happiness + 1
-                elif response.emotion1 == 'hate':
-                    hate = hate + 1
-                    survey_hate = survey_hate + 1
-                elif response.emotion1 == 'sadness':
-                    sadness = sadness + 1
-                    survey_sadness = survey_sadness + 1
-                if response.emotion2 == 'happiness':
-                    happiness = happiness + 1
-                    survey_happiness = survey_happiness + 1
-                elif response.emotion2 == 'hate':
-                    hate = hate + 1
-                    survey_hate = survey_hate + 1
-                elif response.emotion2 == 'sadness':
-                    sadness = sadness + 1
-                    survey_sadness = survey_sadness + 1
-                if response.emotion3 == 'happiness':
-                    happiness = happiness + 1
-                    survey_happiness = survey_happiness + 1
-                elif response.emotion3 == 'hate':
-                    hate = hate + 1
-                    survey_hate = survey_hate + 1
-                elif response.emotion3 == 'sadness':
-                    sadness = sadness + 1
-                    survey_sadness = survey_sadness + 1
-                if response.emotion4 == 'happiness':
-                    happiness = happiness + 1
-                    survey_happiness = survey_happiness + 1
-                elif response.emotion4 == 'hate':
-                    hate = hate + 1
-                    survey_hate = survey_hate + 1
-                elif response.emotion4 == 'sadness':
-                    sadness = sadness + 1
-                    survey_sadness = survey_sadness + 1
-                if response.emotion5 == 'happiness':
-                    happiness = happiness + 1
-                    survey_happiness = survey_happiness + 1
-                elif response.emotion5 == 'hate':
-                    hate = hate + 1
-                    survey_hate = survey_hate + 1
-                elif response.emotion5 == 'sadness':
-                    sadness = sadness + 1
-                    survey_sadness = survey_sadness + 1
-            survey_dict['survey_happiness'] = survey_happiness
-            survey_dict['survey_hate'] = survey_hate
-            survey_dict['survey_sadness'] = survey_sadness
-            surveys_list.append(survey_dict)
-        return jsonify({'responses_count': total_responses_count,
-                        'survey_count':    survey_count,
-                        'users_count':     users_count,
-                        'hate':            hate,
-                        'sadness':         sadness,
-                        'happiness':        happiness,
-                        'surveys_list':    surveys_list
-                        }), 200
-
-    else:
-        return jsonify({'message': 'User is unavailable'}), 400
+    company = Company.query.filter_by(company_code=user.company_code).first()
+    if not company:
+        return jsonify({'message': 'Company is unavailable'}), 404
+    surveys = Survey.query.filter_by(company_id=company.company_id).all()
+    if not surveys:
+        return jsonify({'message': 'Surveys are unavailable'}), 404
+    survey_count = len(surveys)
+    total_responses_count = 0
+    happiness = 0
+    hate = 0
+    sadness = 0
+    surveys_list = []
+    for survey in surveys:
+        survey_hate = 0
+        survey_happiness = 0
+        survey_sadness = 0
+        survey_dict = {}
+        survey_dict['survey'] = survey.name
+        survey_dict['public_id'] = survey.public_id
+        survey_dict['created_at'] = survey.created_at
+        responses = SurveyResponse.query.filter_by(survey_id=survey.survey_id).all()
+        if not responses:
+            return jsonify({'message': 'No responses found'}), 404
+        responses_count = len(responses)
+        total_responses_count = total_responses_count + responses_count
+        for response in responses:
+            if response.emotion == 'happiness':
+                happiness = happiness + 1
+                survey_happiness = survey_happiness + 1
+            elif response.emotion == 'hate':
+                hate = hate + 1
+                survey_hate = survey_hate + 1
+            elif response.emotion1 == 'sadness':
+                sadness = sadness + 1
+                survey_sadness = survey_sadness + 1
+            if response.emotion1 == 'happiness':
+                happiness = happiness + 1
+                survey_happiness = survey_happiness + 1
+            elif response.emotion1 == 'hate':
+                hate = hate + 1
+                survey_hate = survey_hate + 1
+            elif response.emotion1 == 'sadness':
+                sadness = sadness + 1
+                survey_sadness = survey_sadness + 1
+            if response.emotion2 == 'happiness':
+                happiness = happiness + 1
+                survey_happiness = survey_happiness + 1
+            elif response.emotion2 == 'hate':
+                hate = hate + 1
+                survey_hate = survey_hate + 1
+            elif response.emotion2 == 'sadness':
+                sadness = sadness + 1
+                survey_sadness = survey_sadness + 1
+            if response.emotion3 == 'happiness':
+                happiness = happiness + 1
+                survey_happiness = survey_happiness + 1
+            elif response.emotion3 == 'hate':
+                hate = hate + 1
+                survey_hate = survey_hate + 1
+            elif response.emotion3 == 'sadness':
+                sadness = sadness + 1
+                survey_sadness = survey_sadness + 1
+            if response.emotion4 == 'happiness':
+                happiness = happiness + 1
+                survey_happiness = survey_happiness + 1
+            elif response.emotion4 == 'hate':
+                hate = hate + 1
+                survey_hate = survey_hate + 1
+            elif response.emotion4 == 'sadness':
+                sadness = sadness + 1
+                survey_sadness = survey_sadness + 1
+            if response.emotion5 == 'happiness':
+                happiness = happiness + 1
+                survey_happiness = survey_happiness + 1
+            elif response.emotion5 == 'hate':
+                hate = hate + 1
+                survey_hate = survey_hate + 1
+            elif response.emotion5 == 'sadness':
+                sadness = sadness + 1
+                survey_sadness = survey_sadness + 1
+        survey_dict['survey_happiness'] = survey_happiness
+        survey_dict['survey_hate'] = survey_hate
+        survey_dict['survey_sadness'] = survey_sadness
+        surveys_list.append(survey_dict)
+    return jsonify({'responses_count': total_responses_count,
+                    'survey_count':    survey_count,
+                    'users_count':     users_count,
+                    'hate':            hate,
+                    'sadness':         sadness,
+                    'happiness':       happiness,
+                    'surveys_list':    surveys_list
+                    }), 200
 
 
 @app.route('/view_single_survey_responses/<public_id>', methods=['GET'])
@@ -177,7 +177,11 @@ def view_single_survey_responses(public_id):
     user = User.query.filter_by(email=email).first()
     if user:
         company = Company.query.filter_by(company_code=user.company_code).first()
+        if not company:
+            return jsonify({'message': 'Company is not available'}), 404
         survey = Survey.query.filter_by(company_id=company.company_id, public_id=public_id).first()
+        if not survey:
+            return jsonify({'message': 'Survey is not available'}), 404
         survey_name = survey.name
         created_at = survey.created_at
         if survey:
@@ -259,6 +263,6 @@ def view_single_survey_responses(public_id):
         else:
             return jsonify({'message': 'The survey does not exist'}), 404
     else:
-        return jsonify({'message': 'User is unavailable'}), 400
+        return jsonify({'message': 'User is unavailable'}), 404
 
 

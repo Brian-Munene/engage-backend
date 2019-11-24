@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/app/routes/company_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/company_urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/app/routes/survey_responses_url.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/survey_responses_url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/app/routes/survey_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/survey_urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/app/routes/user_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/user_urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +38,9 @@
       </path>
     </expand>
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="employee-engagement-project" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -132,7 +139,13 @@
       <workItem from="1573677518410" duration="590000" />
       <workItem from="1573705305738" duration="1048000" />
       <workItem from="1573818530307" duration="3934000" />
-      <workItem from="1573972814952" duration="7209000" />
+      <workItem from="1573972814952" duration="7896000" />
+      <workItem from="1574165729848" duration="413000" />
+      <workItem from="1574166675486" duration="710000" />
+      <workItem from="1574319008939" duration="1327000" />
+      <workItem from="1574397769083" duration="796000" />
+      <workItem from="1574418015055" duration="7211000" />
+      <workItem from="1574586672949" duration="21272000" />
     </task>
     <task id="LOCAL-00001" summary="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls.">
       <created>1571516743510</created>
@@ -155,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573436903319</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adds route for single survey response details">
+      <created>1574120795004</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574120795005</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +199,7 @@
     <MESSAGE value="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls." />
     <MESSAGE value="Adds emotion analysis model." />
     <MESSAGE value="Adds correct format of data for frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds correct format of data for frontend" />
+    <MESSAGE value="Adds route for single survey response details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds route for single survey response details" />
   </component>
 </project>

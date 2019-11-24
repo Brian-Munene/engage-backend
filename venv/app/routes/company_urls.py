@@ -34,6 +34,23 @@ def register_company():
         return jsonify(response_object), 200
 
 
+@app.route('/companies', methods=['GET'])
+@jwt_required
+def companies():
+    companies = Company.query.all()
+    if not companies:
+        return jsonify({'message': 'There are no companies available at the moment'}), 400
+    companies_list = []
+    for company in companies:
+        company_dict = {
+            'name': company.company_name,
+            'code': company.company_code,
+            'public_id': company.public_id
+        }
+        companies_list.append(company_dict)
+    return jsonify(companies_list), 200
+
+
 @app.route('/company/<public_id>', methods=['GET'])
 @jwt_required
 def company_details(public_id):
