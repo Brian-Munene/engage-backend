@@ -26,6 +26,7 @@ import string
 nltk.download("stopwords")
 nltk.download("wordnet")
 from textblob import Word
+
 # Load Model
 model = pickle.load(open('emotion_logreg.pickle', 'rb'))
 app = Flask(__name__)
@@ -59,7 +60,6 @@ def clean_text(data):
     data = data.map(lambda x: re.sub("(http://.*?\s)|(http://.*)", '', str(x)))
 
     # Correcting Letter Repetitions
-
     def de_repeat(text):
         pattern = re.compile(r"(.)\1{2,}")
         return pattern.sub(r"\1\1", text)

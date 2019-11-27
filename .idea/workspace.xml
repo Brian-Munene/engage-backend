@@ -4,10 +4,7 @@
     <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/company_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/company_urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/survey_responses_url.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/survey_responses_url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/survey_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/survey_urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/user_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/user_urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/app/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +142,10 @@
       <workItem from="1574319008939" duration="1327000" />
       <workItem from="1574397769083" duration="796000" />
       <workItem from="1574418015055" duration="7211000" />
-      <workItem from="1574586672949" duration="21272000" />
+      <workItem from="1574586672949" duration="22710000" />
+      <workItem from="1574687189952" duration="4009000" />
+      <workItem from="1574749151624" duration="1523000" />
+      <workItem from="1574836127102" duration="254000" />
     </task>
     <task id="LOCAL-00001" summary="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls.">
       <created>1571516743510</created>
@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574120795005</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adds route for joining a company and viewing the available companies">
+      <created>1574615182467</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574615182468</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +207,7 @@
     <MESSAGE value="Adds emotion analysis model." />
     <MESSAGE value="Adds correct format of data for frontend" />
     <MESSAGE value="Adds route for single survey response details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds route for single survey response details" />
+    <MESSAGE value="Adds route for joining a company and viewing the available companies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds route for joining a company and viewing the available companies" />
   </component>
 </project>
