@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +145,7 @@
       <workItem from="1574687189952" duration="4009000" />
       <workItem from="1574749151624" duration="1523000" />
       <workItem from="1574836127102" duration="13979000" />
-      <workItem from="1575259640411" duration="4771000" />
+      <workItem from="1575259640411" duration="4891000" />
     </task>
     <task id="LOCAL-00001" summary="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls.">
       <created>1571516743510</created>
@@ -196,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575281967793</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modifies requirements.txt">
+      <created>1575282159118</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575282159118</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +230,7 @@
     <MESSAGE value="Adds route for single survey response details" />
     <MESSAGE value="Adds route for joining a company and viewing the available companies" />
     <MESSAGE value="Adds Procfile and requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds Procfile and requirements.txt" />
+    <MESSAGE value="Modifies requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifies requirements.txt" />
   </component>
 </project>
