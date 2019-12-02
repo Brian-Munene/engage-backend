@@ -23,9 +23,11 @@ def register():
         if User.query.filter_by(email=email).first():
             return jsonify({'message': 'The email has already been registered'}), 401
         password = request_json.get('password')
+        role = request_json.get('role')
         company_code = request_json.get('company_code')
+
         user_public_id = str(uuid.uuid4())
-        user = User(user_public_id, name, email, company_code)
+        user = User(user_public_id, name, email, role, company_code)
         user.hash_password(password)
         try:
             db.session.add(user)

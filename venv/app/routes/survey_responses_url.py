@@ -69,7 +69,7 @@ def create_response(public_id):
 @jwt_required
 def view_all_responses():
     email = get_jwt_identity()
-    user = User.query.filter_by(email=email).first()
+    user = User.query.filter_by(email=email, role='manager').first()
     if not user:
         return jsonify({'message': 'Please login to proceed'}), 404
     users = User.query.filter_by(company_code=user.company_code).all()

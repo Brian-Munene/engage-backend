@@ -8,11 +8,12 @@ from flask_jwt_extended import (jwt_required,
 from database.company import Company
 from database.survey import Survey
 from database.survey_response import SurveyResponse
+from database.user import User
 from routes import app, db
 
 
 @app.route('/register_company', methods=['POST'])
-# @jwt_required
+@jwt_required
 def register_company():
     if request.method == 'POST':
         request_json = request.get_json()
@@ -21,21 +22,25 @@ def register_company():
         company_code = str(uuid.uuid4())
         company_head = request_json.get('company_head')
         company_size = request_json.get('company_size')
-        company = Company(public_id, company_name, company_code, company_head, company_size)
-        db.session.add(company)
-        db.session.commit()
-        response_object = {
-            'public_id': public_id,
-            'name': company_name,
-            'head': company_head,
-            'size': company_size,
-            'code': company_code
-        }
-        return jsonify(response_object), 200
+        email = get_jwt_identity()
+        user = User.query.filter_by(email=email).first()
+        if user.role == 'admin':
+            company = Company(public_id, company_name, company_code, company_head, company_size)
+            db.session.add(company)
+            db.session.commit()
+            response_object = {
+                'public_id': public_id,
+                'name':      company_name,
+                'head':      company_head,
+                'size':      company_size,
+                'code':      company_code
+            }
+            return jsonify(response_object), 200
+        else:
+            return jsonify({'message': 'You cannot register a company'}), 400
 
 
 @app.route('/companies', methods=['GET'])
-@jwt_required
 def companies():
     companies = Company.query.all()
     if not companies:
@@ -88,7 +93,6 @@ def company_surveys(public_id):
 
 
 @app.route('/companies', methods=['GET'])
-@jwt_required
 def get_all_companies():
     companies = Company.query.all()
     if companies:

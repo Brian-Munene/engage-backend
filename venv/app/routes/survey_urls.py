@@ -20,6 +20,8 @@ def create_survey():
         description = request_json.get('description')
         email = get_jwt_identity()
         user = User.query.filter_by(email=email).first()
+        if not user.role == 'manager':
+            return jsonify({'message': 'You are not authorized to create surveys'}), 200
         company = Company.query.filter_by(company_code=user.company_code).first()
         if not company.company_id:
             return jsonify({'message': 'Company does not exist'})

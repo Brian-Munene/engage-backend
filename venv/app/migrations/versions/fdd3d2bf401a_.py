@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: f1c3a4836339
+Revision ID: fdd3d2bf401a
 Revises: 
-Create Date: 2019-11-09 22:27:45.174110
+Create Date: 2019-11-27 11:41:20.333780
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'f1c3a4836339'
+revision = 'fdd3d2bf401a'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -42,6 +42,7 @@ def upgrade():
     sa.Column('name', sa.String(length=70), nullable=False),
     sa.Column('email', sa.String(length=70), nullable=False),
     sa.Column('password_hash', sa.String(length=255), nullable=False),
+    sa.Column('role', sa.String(length=45), nullable=False),
     sa.Column('company_code', sa.String(length=70), nullable=True),
     sa.PrimaryKeyConstraint('user_id'),
     sa.UniqueConstraint('email'),
@@ -52,12 +53,12 @@ def upgrade():
     sa.Column('public_id', sa.String(length=70), nullable=False),
     sa.Column('name', sa.String(length=50), nullable=False),
     sa.Column('description', sa.String(length=150), nullable=False),
-    sa.Column('question_0', sa.String(length=255), nullable=True),
-    sa.Column('question_1', sa.String(length=255), nullable=True),
-    sa.Column('question_2', sa.String(length=255), nullable=True),
-    sa.Column('question_3', sa.String(length=255), nullable=True),
-    sa.Column('question_4', sa.String(length=255), nullable=True),
-    sa.Column('question_5', sa.String(length=255), nullable=True),
+    sa.Column('question_0', sa.String(length=255), nullable=False),
+    sa.Column('question_1', sa.String(length=255), nullable=False),
+    sa.Column('question_2', sa.String(length=255), nullable=False),
+    sa.Column('question_3', sa.String(length=255), nullable=False),
+    sa.Column('question_4', sa.String(length=255), nullable=False),
+    sa.Column('question_5', sa.String(length=255), nullable=False),
     sa.Column('created_at', sa.Date(), nullable=False),
     sa.Column('company_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['company_id'], ['companies.company_id'], ),
@@ -68,17 +69,17 @@ def upgrade():
     sa.Column('response_id', sa.Integer(), nullable=False),
     sa.Column('public_id', sa.String(length=70), nullable=False),
     sa.Column('response', sa.String(length=255), nullable=False),
-    sa.Column('emotion', sa.String(length=50), nullable=True),
+    sa.Column('emotion', sa.String(length=50), nullable=False),
     sa.Column('response1', sa.String(length=255), nullable=False),
-    sa.Column('emotion1', sa.String(length=50), nullable=True),
+    sa.Column('emotion1', sa.String(length=50), nullable=False),
     sa.Column('response2', sa.String(length=255), nullable=False),
-    sa.Column('emotion2', sa.String(length=50), nullable=True),
+    sa.Column('emotion2', sa.String(length=50), nullable=False),
     sa.Column('response3', sa.String(length=255), nullable=False),
-    sa.Column('emotion3', sa.String(length=50), nullable=True),
+    sa.Column('emotion3', sa.String(length=50), nullable=False),
     sa.Column('response4', sa.String(length=255), nullable=False),
-    sa.Column('emotion4', sa.String(length=50), nullable=True),
+    sa.Column('emotion4', sa.String(length=50), nullable=False),
     sa.Column('response5', sa.String(length=255), nullable=False),
-    sa.Column('emotion5', sa.String(length=50), nullable=True),
+    sa.Column('emotion5', sa.String(length=50), nullable=False),
     sa.Column('survey_id', sa.Integer(), nullable=False),
     sa.Column('created_at', sa.Date(), nullable=False),
     sa.ForeignKeyConstraint(['survey_id'], ['surveys.survey_id'], ),

@@ -54,10 +54,12 @@ class User(db.Model):
     name = db.Column(db.String(70), nullable=False)
     email = db.Column(db.String(70), nullable=False, unique=True)
     password_hash = db.Column(db.String(255), nullable=False)
+    role = db.Column(db.String(45), nullable=False)
     company_code = db.Column(db.String(70), nullable=True)
 
-    def __init__(self, public_id, name, email, company_code):
+    def __init__(self, public_id, name, email, role, company_code):
         self.name = name
         self.public_id = public_id
         self.email = email
+        self.role = role
         self.company_code = company_code
