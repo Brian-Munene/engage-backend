@@ -2,58 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn-20.0.4.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn-20.0.4.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn-20.0.4.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn-20.0.4.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn-20.0.4.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn-20.0.4.dist-info/entry_points.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn-20.0.4.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/app/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/app/pasterapp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/app/wsgiapp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/arbiter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/debug.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/errors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/glogging.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/http/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/http/body.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/http/errors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/http/message.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/http/parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/http/unreader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/http/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/instrument/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/instrument/statsd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/pidfile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/reloader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/sock.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/systemd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/workers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/workers/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/workers/base_async.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/workers/geventlet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/workers/ggevent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/workers/gthread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/workers/gtornado.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/workers/sync.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/workers/workertmp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/gunicorn.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/database/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/database/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/migrations/versions/73342d8d064e_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/migrations/versions/f1c3a4836339_.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/migrations/versions/fdd3d2bf401a_.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/migrations/versions/fa97b49d05cc_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/company_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/company_urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/survey_responses_url.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/survey_responses_url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/survey_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/survey_urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/user_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/user_urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -196,7 +145,7 @@
       <workItem from="1574687189952" duration="4009000" />
       <workItem from="1574749151624" duration="1523000" />
       <workItem from="1574836127102" duration="13979000" />
-      <workItem from="1575259640411" duration="4374000" />
+      <workItem from="1575259640411" duration="4771000" />
     </task>
     <task id="LOCAL-00001" summary="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls.">
       <created>1571516743510</created>
@@ -240,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574836525172</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adds Procfile and requirements.txt">
+      <created>1575281967793</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575281967793</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +222,7 @@
     <MESSAGE value="Adds correct format of data for frontend" />
     <MESSAGE value="Adds route for single survey response details" />
     <MESSAGE value="Adds route for joining a company and viewing the available companies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds route for joining a company and viewing the available companies" />
+    <MESSAGE value="Adds Procfile and requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds Procfile and requirements.txt" />
   </component>
 </project>
