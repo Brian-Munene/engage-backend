@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/app/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +149,7 @@
       <workItem from="1575259640411" duration="10336000" />
       <workItem from="1575386307529" duration="695000" />
       <workItem from="1575388562815" duration="956000" />
-      <workItem from="1575392038135" duration="1289000" />
+      <workItem from="1575392038135" duration="1582000" />
     </task>
     <task id="LOCAL-00001" summary="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls.">
       <created>1571516743510</created>
@@ -231,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575283130446</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Modifies Procfile 3">
+      <created>1575395230666</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1575395230666</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +265,7 @@
     <MESSAGE value="Modifies requirements.txt" />
     <MESSAGE value="Modifies Procfile" />
     <MESSAGE value="Modifies Procfile 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifies Procfile 2" />
+    <MESSAGE value="Modifies Procfile 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifies Procfile 3" />
   </component>
 </project>
