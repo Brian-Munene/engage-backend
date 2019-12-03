@@ -1,1 +1,1 @@
-web: gunicorn app.routes.init:app
+web: gunicorn app:run

@@ -29,11 +29,11 @@
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>766</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|33135|33137|1
-sequence|table|33127|33129|1
-sequence|table|33167|33169|1
-sequence|table|33210|33212|1
+      <Relations>sequence|table|33210|33212|1
 sequence|table|33188|33190|1
+sequence|table|33167|33169|1
+sequence|table|33135|33137|1
+sequence|table|33127|33129|1
 </Relations>
     </database>
     <database id="8" parent="1" name="gym">
