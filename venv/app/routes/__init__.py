@@ -80,11 +80,11 @@ def decode_response(response):
     return emotion_list
 
 
-    # Development database_uri
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:motongoria@127.0.0.1:5432/employee-engagement"
+#     # Development database_uri
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:motongoria@127.0.0.1:5432/employee-engagement"
 
-# Production Url
-# app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gbflabtamgibih:545172c3d798f194bb235abbb58def05ad798bb8c43cf7890f5da4fed7e6527e@ec2-54-243-44-102.compute-1.amazonaws.com:5432/d4n2pafqrnnn91"
+Production Url
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gbflabtamgibih:545172c3d798f194bb235abbb58def05ad798bb8c43cf7890f5da4fed7e6527e@ec2-54-243-44-102.compute-1.amazonaws.com:5432/d4n2pafqrnnn91"
 
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
