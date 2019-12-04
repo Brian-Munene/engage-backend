@@ -1,1 +1,2 @@
-web: flask db init; flask db migrate; flask db upgrade; gunicorn venv.app.routes:app
+web:  gunicorn venv.app.routes:app
+release: python manage.py db init; db migrate; db upgrade
