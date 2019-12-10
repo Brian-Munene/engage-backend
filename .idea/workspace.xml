@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/app/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/app/routes/__init__.py" afterDir="false" />
     </list>
@@ -70,9 +71,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Brian\Documents\work\Final Project\employee-engagement-project\venv\app" />
       <recent name="C:\Users\Brian\Documents\work\Final Project\employee-engagement-project\venv\app\routes" />
       <recent name="C:\Users\Brian\Documents\work\Final Project\employee-engagement-project" />
-      <recent name="C:\Users\Brian\Documents\work\Final Project\employee-engagement-project\venv\app" />
       <recent name="C:\Users\Brian\Documents\work\Final Project\employee-engagement-project\venv\app/routes" />
     </key>
   </component>
@@ -149,7 +150,10 @@
       <workItem from="1575259640411" duration="10336000" />
       <workItem from="1575386307529" duration="695000" />
       <workItem from="1575388562815" duration="956000" />
-      <workItem from="1575392038135" duration="11376000" />
+      <workItem from="1575392038135" duration="12697000" />
+      <workItem from="1575870873900" duration="2478000" />
+      <workItem from="1575963472235" duration="2684000" />
+      <workItem from="1576008436646" duration="5653000" />
     </task>
     <task id="LOCAL-00001" summary="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls.">
       <created>1571516743510</created>
@@ -333,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575451350696</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="EmotionLogreg location changes">
+      <created>1575452400775</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1575452400776</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,6 +378,7 @@
     <MESSAGE value="Modifies Procfile 4" />
     <MESSAGE value="Database URL changed" />
     <MESSAGE value="Procfile changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Procfile changes" />
+    <MESSAGE value="EmotionLogreg location changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="EmotionLogreg location changes" />
   </component>
 </project>
