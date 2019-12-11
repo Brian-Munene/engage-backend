@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="">
+    <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="Circleci configurations modified">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -152,7 +152,7 @@
       <workItem from="1575392038135" duration="12697000" />
       <workItem from="1575870873900" duration="2478000" />
       <workItem from="1575963472235" duration="2684000" />
-      <workItem from="1576008436646" duration="7218000" />
+      <workItem from="1576008436646" duration="8120000" />
     </task>
     <task id="LOCAL-00001" summary="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls.">
       <created>1571516743510</created>
@@ -350,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576016733375</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Circleci configurations modified">
+      <created>1576021831280</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1576021831281</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,6 +393,7 @@
     <MESSAGE value="Procfile changes" />
     <MESSAGE value="EmotionLogreg location changes" />
     <MESSAGE value="Circleci configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Circleci configurations" />
+    <MESSAGE value="Circleci configurations modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Circleci configurations modified" />
   </component>
 </project>
