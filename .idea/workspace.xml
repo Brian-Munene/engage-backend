@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0afbf3b-7b45-4324-a0a7-a361f44b7869" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d351bc5-1b58-47c2-b03b-0bc0a25dcbbc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +51,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
@@ -66,7 +70,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.r.configuration.RActiveInterpreterProjectConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -76,15 +80,15 @@
       <recent name="C:\Users\Brian\Documents\work\Final Project\employee-engagement-project\venv\app/routes" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -152,7 +156,15 @@
       <workItem from="1575392038135" duration="12697000" />
       <workItem from="1575870873900" duration="2478000" />
       <workItem from="1575963472235" duration="2684000" />
-      <workItem from="1576008436646" duration="8275000" />
+      <workItem from="1576008436646" duration="9374000" />
+      <workItem from="1576480734432" duration="1276000" />
+      <workItem from="1576484477341" duration="116000" />
+      <workItem from="1576484783712" duration="1208000" />
+      <workItem from="1576497924484" duration="2901000" />
+      <workItem from="1576571163152" duration="4275000" />
+      <workItem from="1576734708458" duration="1199000" />
+      <workItem from="1578298293959" duration="766000" />
+      <workItem from="1580129100393" duration="201000" />
     </task>
     <task id="LOCAL-00001" summary="Adds access_token, company urls, survey urls, survey responses urls, survey urls and user urls.">
       <created>1571516743510</created>
@@ -364,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576022741305</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Circleci configurations modified">
+      <created>1576022887818</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1576022887818</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,5 +421,11 @@
     <MESSAGE value="Circleci configurations" />
     <MESSAGE value="Circleci configurations modified" />
     <option name="LAST_COMMIT_MESSAGE" value="Circleci configurations modified" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="27" key="SettingsEditor" timestamp="1580129186847">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="27" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1580129186847" />
   </component>
 </project>
