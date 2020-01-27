@@ -27,7 +27,7 @@ nltk.download("stopwords")
 nltk.download("wordnet")
 from textblob import Word
 # Load Model
-model = pickle.load(open('emotion_logreg.pickle', 'rb'))
+model = pickle.load(open('engage-backend/venv/app/routes/emotion_logreg.pickle', 'rb'))
 app = Flask(__name__)
 CORS(app)
 
