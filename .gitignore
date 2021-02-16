@@ -1,2 +1,3 @@
 *.xml
-venv
+/venv
+/migrations
