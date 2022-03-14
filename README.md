@@ -31,12 +31,23 @@ pip install -r requirements.txt
 ```
 
 ## How to Run
+
 Open the app directory
 
 ```shell script
-$ cd app
+cd app
 ```
+
+Run Migrations
+
+```shell script
+python manage.py db init
+python manage.py migrate -m "Initial Migration"
+python manage.py db upgrade
+```
+
 Run the application
+
 ```shell script
 python run.py
 ```
