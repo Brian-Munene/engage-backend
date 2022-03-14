@@ -78,7 +78,7 @@ def decode_response(response):
             emotion_list.append('sadness')
     return emotion_list
 # Development database_uri
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:motongoria@127.0.0.1:5432/employee-engagement"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:motongoria@127.0.0.1:5432/employee_engagement"
 
 # Production Url
 # app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gbflabtamgibih:545172c3d798f194bb235abbb58def05ad798bb8c43cf7890f5da4fed7e6527e@ec2-54-243-44-102.compute-1.amazonaws.com:5432/d4n2pafqrnnn91"
