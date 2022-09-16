@@ -22,7 +22,7 @@ itsdangerous==1.1.0
 jaraco.functools==2.0
 Jinja2==2.11.3
 joblib==0.14.0
-Mako==1.1.0
+Mako==1.2.2
 MarkupSafe==1.1.1
 more-itertools==7.2.0
 MyApplication==0.1.0
