@@ -21,7 +21,7 @@ idna==2.8
 itsdangerous==1.1.0
 jaraco.functools==2.0
 Jinja2==2.11.3
-joblib==0.14.0
+joblib==1.2.0
 Mako==1.1.0
 MarkupSafe==1.1.1
 more-itertools==7.2.0
